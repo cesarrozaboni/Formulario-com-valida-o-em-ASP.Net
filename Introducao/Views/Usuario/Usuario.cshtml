@@ -1,0 +1,77 @@
+﻿@model Introducao.Models.Usuario
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Validação de Usuario</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Dados do usuario</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuNome)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.usuNome)
+        @Html.ValidationMessageFor(model => model.usuNome)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuObservacoes)
+    </div>
+    <div>
+        @Html.TextAreaFor(model => model.usuObservacoes)
+        @Html.ValidationMessageFor(model => model.usuObservacoes)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuIdade)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.usuIdade)
+        @Html.ValidationMessageFor(model => model.usuIdade)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuEmail)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.usuEmail)
+        @Html.ValidationMessageFor(model => model.usuEmail)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuLogin)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.usuLogin)
+        @Html.ValidationMessageFor(model => model.usuLogin)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuSenha)
+    </div>
+    <div>
+        @Html.PasswordFor(model => model.usuSenha)
+        @Html.ValidationMessageFor(model => model.usuSenha)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.usuConfirmaSenha)
+    </div>
+    <div>
+        @Html.PasswordFor(model => model.usuConfirmaSenha)
+        @Html.ValidationMessageFor(model => model.usuConfirmaSenha)
+    </div>
+
+    <p><input type="submit" value="Cadastrar" /></p>
+
+</fieldset>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+        }
+}
+

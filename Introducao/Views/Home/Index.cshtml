@@ -1,0 +1,60 @@
+﻿@model Introducao.Models.Pessoa
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!--Usando viewData-->
+<!--
+<p>@ViewData["PesId"]</p>
+<p>@ViewData["PesNome"]</p>
+<p>@ViewData["PesTipo"]</p>
+-->
+<!--Usamdo view bag-->
+<!--
+<p>@ViewBag.Id</p>
+<p>@ViewBag.Nome</p>
+<p>@ViewBag.Tipo</p>
+-->
+<!--Usando view tipada-->
+<!--
+<p>@Model.pesId</p>
+<p>@Model.pesNome</p>
+<p>@Model.pesTipo</p>
+-->
+
+
+<!--Usando formulario html-->
+<!--<form action="Home/Lista" method="post">-->
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Informações de pessoas</legend>
+
+        <div>
+            @Html.LabelFor(x => x.pesId)
+        </div>
+        <div>
+           @Html.EditorFor(x => x.pesId)
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.pesNome)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.pesNome)
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.pesTipo)
+        </div>
+        <div>
+            @Html.EditorFor(x => x.pesTipo)
+        </div>
+        <br />
+        <p><input type="submit" value="Enviar" /></p>
+    </fieldset>
+}
+<!--</form>-->

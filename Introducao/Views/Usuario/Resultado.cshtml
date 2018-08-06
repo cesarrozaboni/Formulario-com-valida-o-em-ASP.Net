@@ -1,0 +1,61 @@
+﻿@model Introducao.Models.Usuario
+@{
+    ViewBag.Title = "Página de resultados";
+}
+
+<h2>Resultados de usuario</h2>
+
+<fieldset>
+    <legend>Usuário Cadastrado</legend>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuNome)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuNome)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuObservacoes)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuObservacoes)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuIdade)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuIdade)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuEmail)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuEmail)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuLogin)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuLogin)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuSenha)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuSenha)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.usuConfirmaSenha)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.usuConfirmaSenha)
+    </div>
+
+    <p>@Html.ActionLink("Voltar", "Usuario")</p>
+</fieldset>
+

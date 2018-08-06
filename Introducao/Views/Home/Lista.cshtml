@@ -1,0 +1,55 @@
+﻿@model Introducao.Models.Pessoa
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista de Pessoas</h2>
+<!--Usando viewbag-->
+<!--
+<div>
+    <b>Código</b>
+</div>
+<div>
+    @ViewData["pesId"];
+</div>
+
+<div>
+    <b>Nome</b>
+</div>
+<div>
+    @ViewData["pesNome"];
+</div>
+
+<div>
+    <b>Tipo</b>
+</div>
+<div>
+    @ViewData["pesTipo"];
+</div>
+-->
+<!--Usando view tipada + objeto da classe-->
+<div>
+    <b><!--Código-->@Html.LabelFor(x => x.pesId)</b>
+</div>
+<div>
+    @Model.pesId
+</div>
+
+<div>
+    <b><!--Nome-->@Html.LabelFor(x => x.pesNome)</b>
+</div>
+<div>
+    @Model.pesNome
+</div>
+
+<div>
+    <b><!--Tipo-->@Html.LabelFor(x => x.pesTipo)</b>
+</div>
+<div>
+    @Model.pesTipo
+</div>
+
+<!--Link HTML-->
+<!--<a href="~/">Voltar</a>-->
+
+@Html.ActionLink("Pagina inicial", "Index", "Home")
